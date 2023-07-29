@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+model User {
+  id         String      @id @default(uuid())
+  name       String
+  imageUrl   String      @default("https://e7.pngegg.com/pngimages/304/275/png-clipart-user-profile-computer-icons-profile-miscellaneous-logo.png")
+  comments   Comment[]
+  interviews Interview[]
+}
+
+enum InterviewStatus {
+  TODO
+  INPROGRESS
+  DONE
+}
+
+model Interview {
+  id        String          @id @default(uuid())
+  title     String
+  message   String
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  status    InterviewStatus @default(TODO)
+  creatorId String
+
+  users   User      @relation(fields: [creatorId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  comment Comment[]
+}
+
+model Comment {
+  id          String   @id @default(uuid())
+  message     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  interviewId String
+  userId      String
+
+  users     User      @relation(fields: [userId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  interview Interview @relation(fields: [interviewId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+}
