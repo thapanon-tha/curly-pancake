@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "07d863db-cc47-4e96-833b-d1ef36a6f422",
+		"name": "Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15365039"
+	},
+	"item": [
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "interview comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/interviews/:id/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								":id",
+								"comments"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "d3aef5ed-7dbc-4724-8070-9f3ba19bab22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "interview comments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"aaaa\",\r\n    \"userId\": \"65a750f9-960a-4f66-9dcd-fd37f398bdc4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/interviews/:id/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								":id",
+								"comments"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a433db1-6d92-4007-b9eb-58517bbd8b40"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "interview comments",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"message\": \"aaaa\",\r\n    \"userId\": \"65a750f9-960a-4f66-9dcd-fd37f398bdc4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/interviews/:id/comments",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"interviews",
+										":id",
+										"comments"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a433db1-6d92-4007-b9eb-58517bbd8b40"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "interview comments",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"message\": \"update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/interviews/:id/comments/:commentId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								":id",
+								"comments",
+								":commentId"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a433db1-6d92-4007-b9eb-58517bbd8b40"
+								},
+								{
+									"key": "commentId",
+									"value": "e12a4af3-fc4e-4ad1-99ca-207816de2ff6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "interview comments",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"message\": \"update\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/interviews/:id/comments/:commentId",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"interviews",
+										":id",
+										"comments",
+										":commentId"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9a433db1-6d92-4007-b9eb-58517bbd8b40"
+										},
+										{
+											"key": "commentId",
+											"value": "e12a4af3-fc4e-4ad1-99ca-207816de2ff6"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "interview comments",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/interviews/:id/comments/:commentId",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								":id",
+								"comments",
+								":commentId"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a433db1-6d92-4007-b9eb-58517bbd8b40"
+								},
+								{
+									"key": "commentId",
+									"value": "e12a4af3-fc4e-4ad1-99ca-207816de2ff6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rbh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "users",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mock_user\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Snow\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1FdETEQBkw39bHwTbD3pCf"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"John Snow\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "636aaa59-31e4-4e30-8d89-3a27d7803094"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "interview",
+			"item": [
+				{
+					"name": "interviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/interviews",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "interviews One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/interviews/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a433db1-6d92-4007-b9eb-58517bbd8b40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "interviews",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"TODO\",\r\n    \"createrId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/interviews/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "interviews",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"TODO\",\r\n    \"createrId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/interviews/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"interviews",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "interviews",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"DONE\",\r\n    \"createrId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/interviews/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7fb1dc09-76f1-4926-9696-0316fb742967"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "interviews",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"DONE\",\r\n    \"createrId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/interviews/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"interviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7fb1dc09-76f1-4926-9696-0316fb742967"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "interviews",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/interviews/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"interviews",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9a433db1-6d92-4007-b9eb-58517bbd8b40"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

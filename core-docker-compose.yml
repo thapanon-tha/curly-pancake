@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  core-service:
+    image: core-service
+    container_name: core-service
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 3000:3000
+    networks:
+      - networkName
+
+networks:
+  networkName:
+    driver: bridge
