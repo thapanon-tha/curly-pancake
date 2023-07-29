@@ -2,7 +2,11 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
 import { Prisma, Interview as InterviewPrisma } from '@prisma/client';
 import { InterviewModel, InterviewStatus } from './models';
-import { CreateInterviewForm, UpdateInterviewForm } from './forms';
+import {
+  CreateInterviewForm,
+  InterviewPageOptionsParamForm,
+  UpdateInterviewForm,
+} from './forms';
 import { UserModel } from 'src/user-management/models';
 
 const interviewWithUser = Prisma.validator<Prisma.InterviewArgs>()({
@@ -41,11 +45,29 @@ export class InterviewRepository {
     });
   }
 
-  async gets(): Promise<InterviewModel[]> {
+  async gets(
+    queryOption: InterviewPageOptionsParamForm,
+  ): Promise<InterviewModel[]> {
     const data = await this.prisma.interview.findMany({
+      where: {
+        ...(queryOption.status
+          ? {
+              status: {
+                in: queryOption.status,
+              },
+            }
+          : {}),
+      },
       include: {
         users: true,
       },
+      orderBy: {
+        ...(queryOption.sortBy
+          ? { [queryOption.sortBy]: queryOption.sortOrder }
+          : { createdAt: 'desc' }),
+      },
+      skip: queryOption.skip,
+      take: queryOption.take,
     });
     return data.map((e) => this.convertToModel(e));
   }

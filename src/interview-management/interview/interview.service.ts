@@ -1,5 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { CreateInterviewForm, UpdateInterviewForm } from './forms';
+import {
+  CreateInterviewForm,
+  UpdateInterviewForm,
+  InterviewPageOptionsParamForm,
+} from './forms';
 import { InterviewRepository } from './interview.repo';
 
 @Injectable()
@@ -10,8 +14,8 @@ export class InterviewService {
     return this.interviewRepo.create(payload);
   }
 
-  findAll() {
-    return this.interviewRepo.gets();
+  findAll(queryOption: InterviewPageOptionsParamForm) {
+    return this.interviewRepo.gets(queryOption);
   }
 
   findOne(id: string) {

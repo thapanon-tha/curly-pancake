@@ -394,12 +394,37 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/interviews",
+							"raw": "{{url}}/interviews?take=1&sortBy=status&sortOrder=asc&status=INPROGRESS",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"interviews"
+							],
+							"query": [
+								{
+									"key": "take",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "status",
+									"description": "createdAt, title, status"
+								},
+								{
+									"key": "sortOrder",
+									"value": "asc",
+									"description": "asc , desc"
+								},
+								{
+									"key": "status",
+									"value": "INPROGRESS"
+								},
+								{
+									"key": "status",
+									"value": "DONE",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -436,7 +461,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"TODO\",\r\n    \"createrId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
+							"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"TODO\",\r\n    \"creatorId\": \"636aaa59-31e4-4e30-8d89-3a27d7803094\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -462,7 +487,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"TODO\",\r\n    \"createrId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
+									"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"TODO\",\r\n    \"creatorId\": \"636aaa59-31e4-4e30-8d89-3a27d7803094\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -513,7 +538,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "7fb1dc09-76f1-4926-9696-0316fb742967"
+									"value": "58da1fbb-7708-4eb8-88b2-c5499f91b1b5"
 								}
 							]
 						}
@@ -526,7 +551,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"DONE\",\r\n    \"createrId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
+									"raw": "{\r\n    \"title\": \"test5\",\r\n    \"message\": \"Lorem a\",\r\n    \"status\": \"DONE\",\r\n    \"creatorId\": \"71ffa246-53ff-4294-b1c8-8778ef2b2faf\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"

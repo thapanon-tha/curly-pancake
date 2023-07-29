@@ -6,9 +6,14 @@ import {
   Put,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { InterviewService } from './interview.service';
-import { CreateInterviewForm, UpdateInterviewForm } from './forms';
+import {
+  CreateInterviewForm,
+  UpdateInterviewForm,
+  InterviewPageOptionsParamForm,
+} from './forms';
 import { IdParamForm } from 'src/common/forms';
 
 @Controller('interviews')
@@ -21,8 +26,8 @@ export class InterviewController {
   }
 
   @Get()
-  findAll() {
-    return this.interviewService.findAll();
+  findAll(@Query() queryPageParam: InterviewPageOptionsParamForm) {
+    return this.interviewService.findAll(queryPageParam);
   }
 
   @Get(':id')
